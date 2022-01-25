@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb934457-426f-463f-981a-3c65d4dad39e" name="Default Changelist" comment="" />
+    <list default="true" id="eb934457-426f-463f-981a-3c65d4dad39e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/META-INF/samecontent.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/demo/samecontent/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/demo/samecontent/domain/HashPair.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/demo/samecontent/exceptions/AccessException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/demo/samecontent/exceptions/InternalException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/demo/samecontent/exceptions/UsageException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/demo/samecontent/services/ContentScanner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/demo/samecontent/services/FileContentScanner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/demo/samecontent/util/FileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/demo/samecontent/util/StringUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/com/demo/samecontent/util/Visitor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-classes/META-INF/samecontent.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-classes/com/demo/samecontent/services/TestContentScanner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-classes/com/demo/samecontent/util/StringUtilTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/samecontent/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/samecontent/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/samecontent/services/ContentScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/samecontent/services/ContentScanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/samecontent/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/samecontent/util/FileUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/demo/samecontent/util/FileUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demo/samecontent/util/FileUtilTest.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +41,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -32,7 +55,9 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="24C4uTE0a1KBIsKIQ0Crd7wUk9Y" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
@@ -69,7 +94,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestContentScanner.testLogic">
+  <component name="RunManager" selected="JUnit.FileUtilTest.testThrows">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.demo.samecontent.Main" />
       <module name="samecontent" />
@@ -80,6 +105,38 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileUtilTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="samecontent" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demo.samecontent.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.demo.samecontent.util" />
+      <option name="MAIN_CLASS_NAME" value="com.demo.samecontent.util.FileUtilTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileUtilTest.testThrows" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="samecontent" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demo.samecontent.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.demo.samecontent.util" />
+      <option name="MAIN_CLASS_NAME" value="com.demo.samecontent.util.FileUtilTest" />
+      <option name="METHOD_NAME" value="testThrows" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,9 +177,13 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.StringUtilTest.testHasText" />
       <item itemvalue="JUnit.TestContentScanner.testLogic" />
+      <item itemvalue="JUnit.FileUtilTest.test" />
+      <item itemvalue="JUnit.FileUtilTest.testThrows" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileUtilTest.testThrows" />
+        <item itemvalue="JUnit.FileUtilTest.test" />
         <item itemvalue="JUnit.TestContentScanner.testLogic" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.StringUtilTest.testHasText" />
@@ -139,11 +200,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1643121456612</updated>
-      <workItem from="1643121460580" duration="10575000" />
+      <workItem from="1643121460580" duration="11741000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

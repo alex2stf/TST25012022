@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
@@ -15,6 +16,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.function.Function;
 
 import static java.util.concurrent.CompletableFuture.supplyAsync;
 
@@ -45,15 +47,15 @@ public abstract class ContentScanner<C> {
 
         CompletableFuture[] futures = new CompletableFuture[futureList.size()];
         futureList.toArray(futures);
-        try {
-            CompletableFuture.allOf(futures).get();
-        } catch (InterruptedException e) {
-            log.error("Interrupted ", e);
-        } catch (ExecutionException e) {
-            log.error("Execution failed ", e);
-        }
-        threadPool.shutdown();
 
+        CompletableFuture.allOf(futures).thenApply(aVoid -> {
+            doWriteBuffer(buffer, writer);
+            return null;
+        });
+    }
+
+
+    private void doWriteBuffer(Map<String, List<String>> buffer, Writer writer){
         buffer.forEach((key, list) -> {
             if (list.size() < 2){
                 //DO NOTHING for single elements array
@@ -78,7 +80,6 @@ public abstract class ContentScanner<C> {
             log.error("Close failed ", e);
         }
     }
-
 
     private void checkBuffer(Map<String, List<String>> buffer, String key, String value){
         List<String> items;

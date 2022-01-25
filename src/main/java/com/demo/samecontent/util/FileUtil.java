@@ -1,6 +1,8 @@
 package com.demo.samecontent.util;
 
 import com.demo.samecontent.domain.HashPair;
+import com.demo.samecontent.exceptions.AccessException;
+import com.demo.samecontent.exceptions.UsageException;
 import com.demo.samecontent.services.ContentScanner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +14,20 @@ import java.io.IOException;
 
 public class FileUtil {
     static final Logger log = LoggerFactory.getLogger(FileUtil.class);
+
+
+    public static File getRootFromArgs(String args[]){
+        if (args.length == 0 || !StringUtil.hasText(args[0])){
+            throw new UsageException("missing required path argument");
+        }
+        String rootPath = args[0];
+        File rootFile = new File(rootPath);
+
+        if (!rootFile.exists()){
+            throw new AccessException("File " + rootFile.getAbsolutePath() + " not found");
+        }
+        return rootFile;
+    }
 
     public static void recursiveScan(File root, Visitor<File> fileVisitor){
         File innerFiles[] = root.listFiles();
